@@ -1,15 +1,206 @@
 /*
-Theme Name: Twenty Twenty-Four
-Theme URI: https://wordpress.org/themes/twentytwentyfour/
-Author: the WordPress team
-Author URI: https://wordpress.org
-Description: Twenty Twenty-Four is designed to be flexible, versatile and applicable to any website. Its collection of templates and patterns tailor to different needs, such as presenting a business, blogging and writing or showcasing work. A multitude of possibilities open up with just a few adjustments to color and typography. Twenty Twenty-Four comes with style variations and full page designs to help speed up the site building process, is fully compatible with the site editor, and takes advantage of new design tools introduced in WordPress 6.4.
-Requires at least: 6.4
-Tested up to: 6.5
-Requires PHP: 7.0
-Version: 1.1
+Theme Name: thistheme
+Theme URI: http://thistheme.com
+Author: thistheme
+Author URI: http://thistheme.com
+Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: twentytwentyfour
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready, wide-blocks, block-styles, style-variations, accessibility-ready, blog, portfolio, news
+License URI: LICENSE
+Text Domain: thistheme 
+
 */
+
+/*@font-face {
+    font-family: 'IRANSans';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/iransans/IRANSansWeb.eot');
+    src: url('fonts/iransans/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  
+         url('fonts/iransans/IRANSansWeb.woff2') format('woff2'), 
+         url('fonts/iransans/IRANSansWeb.woff') format('woff'), 
+         url('fonts/iransans/IRANSansWeb.ttf') format('truetype');
+}*/
+
+/*---------------- Base Site --------------*/
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--red);
+    background: #dfdfdf;
+}
+
+::selection {
+    color: var(--red);
+    background: #dfdfdf;
+}
+
+ul {
+    list-style: none;
+}
+
+video {
+    cursor: pointer;
+}
+
+body {
+    margin: 0 0 0;
+    padding: 0;
+    background: var(--dark);
+    color: #eee;
+}
+
+a {
+    color: #333333;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: inherit;
+}
+
+a,
+a:link {
+    text-decoration: none;
+}
+
+:root {
+    --dark: #0d1515;
+    --dark-layer: #1a4341;
+}
+
+.green-hover:hover {
+    color: var(--red) !important;
+}
+
+.h1,
+h1 {
+    font-weight: 500;
+}
+
+.h2,
+h2 {
+    font-weight: 400;
+}
+
+.h3,
+h3 {
+    font-weight: 300;
+}
+
+.h4,
+h4 {
+    font-weight: 200;
+}
+
+.h5,
+h5 {
+    font-weight: 100;
+}
+
+.h6,
+h6 {
+    font-weight: 100;
+}
+
+.title-site {
+    font-size: 35px;
+    font-weight: 500;
+    color: var(--dark);
+}
+
+svg {
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+path,
+rect,
+circle,
+ellipse {
+    transition: 0.3s;
+}
+
+.between-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    flex-flow: column;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.wrapper {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/*---------------- Home Page --------------*/
+.top-shadow {
+    width: 800px;
+    height: 400px;
+    background: var(--dark-layer);
+    border-radius: 60%;
+    filter: blur(120px);
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: -50%;
+}
+
+/*---------------- List Project --------------*/
+
+.detail-list-item.detail-chains img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.list-item {
+    border: 1px solid;
+    background: #ffffff08;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.list-item .detail-name img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+/*---------------- Responsive --------------*/
+/* xl 1200px  -  lg 992px  -  md 768px  -  sm 576px  -  xs <576px */
+/*---------------- xl< --------------*/
+@media only screen and (min-width: 1200px) {}
+
+/*---------------- xl --------------*/
+@media only screen and (max-width: 1300px) {}
+
+/*---------------- lg --------------*/
+@media only screen and (max-width: 1200px) {}
+
+/*---------------- md --------------*/
+@media only screen and (max-width: 992px) {}
+
+/*---------------- sm --------------*/
+@media only screen and (max-width: 768px) {}
+
+/*---------------- xs --------------*/
+@media only screen and (max-width: 576px) {}
