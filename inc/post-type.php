@@ -9,8 +9,6 @@ add_action( 'init', 'project_post_type', 0 );
 
 function project_post_type() {
 
-
-
 	$labels = array(
 
 		'name'                => 'Projects',
@@ -57,9 +55,9 @@ function project_post_type() {
 
 		'has_archive'         => true,		
 
-		'exclude_from_search' => false, 
+		'exclude_from_search' => true, 
 
-		'publicly_queryable'  => false,
+		'publicly_queryable'  => true,
 
 		'rewrite'             => true,
 

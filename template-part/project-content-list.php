@@ -1,5 +1,5 @@
-<a class="w100 between-flex list-item" href="<?php echo get_the_permalink(); ?>">
-    <div class="between-flex detail-list-item detail-name">
+<a class="h2 w100 flex space-between list-item" href="<?php echo get_the_permalink(); ?>">
+    <div class="samewidth flex flex-start detail-list-item detail-name">
         <?php 
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail('medium');
@@ -7,7 +7,7 @@
             the_title();
             ?>
     </div>
-    <div class="center-flex detail-list-item detail-chains">
+    <div class="samewidth flex flex-center detail-list-item detail-chains">
         <?php
             if(in_array('ETH', get_field('chains_needed'))){
                 echo '<img src="'.get_template_directory_uri().'/images/rsz_ethereum.webp" alt="Ethereum">';
@@ -53,7 +53,7 @@
             }
         ?>
     </div>
-    <div class="detail-list-item detail-cost">
-        <?php the_field('cost_needed'); ?>
+    <div class="samewidth flex flex-end detail-list-item detail-cost">
+        <p><span>~ $</span><?php the_field('cost_needed'); ?></p>
     </div>
 </a>

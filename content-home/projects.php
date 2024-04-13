@@ -1,5 +1,5 @@
 <div class="wrapper">
-	<div class="column between-flex">
+	<div class="column flex-between flex">
 		<?php 
 		$query = new WP_Query(array(
 			'post_type'     => 'project',

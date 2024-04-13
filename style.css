@@ -46,6 +46,7 @@ body {
     padding: 0;
     background: var(--dark);
     color: #eee;
+    font-family: system-ui;
 }
 
 a {
@@ -65,6 +66,10 @@ a:link {
 :root {
     --dark: #0d1515;
     --dark-layer: #1a4341;
+    --dark-layer2: #2a6461;
+    --light-gray: #3a3a3a;
+    --lighter-gray: #656565;
+    --green: #6efcd5;
 }
 
 .green-hover:hover {
@@ -73,13 +78,20 @@ a:link {
 
 .h1,
 h1 {
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .h2,
 h2 {
-    font-weight: 400;
+    color: #6efcd5;
+    font-size: 19px;
+    font-weight: 500;
 }
+
+.samewidth {
+    flex: 1;
+}
+
 
 .h3,
 h3 {
@@ -120,16 +132,25 @@ ellipse {
     transition: 0.3s;
 }
 
-.between-flex {
-    display: flex;
+.space-between {
     justify-content: space-between;
+}
+
+.flex {
+    display: flex;
     align-items: center;
 }
 
-.center-flex {
-    display: flex;
+.flex-center {
     justify-content: center;
-    align-items: center;
+}
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.flex-end {
+    justify-content: flex-end;
 }
 
 .column {
@@ -145,6 +166,36 @@ ellipse {
     margin: 0 auto;
 }
 
+.d-inline-block {
+    display: inline-block;
+}
+
+.btn {
+    border: 2px solid;
+    padding: 10px 30px;
+    font-size: 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.deactive-btn {
+    background: none;
+    border-color: var(--dark-layer);
+    color: var(--dark-layer2);
+}
+
+.active-btn {
+    background: var(--green);
+    border-color: var(--green);
+    color: var(--dark);
+}
+
 /*---------------- Home Page --------------*/
 .top-shadow {
     width: 800px;
@@ -158,18 +209,20 @@ ellipse {
     left: 0;
     margin: 0 auto;
     top: -50%;
+    z-index: -1;
 }
 
 /*---------------- List Project --------------*/
 
 .detail-list-item.detail-chains img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
+    margin: 0 5px;
 }
 
 .list-item {
-    border: 1px solid;
+    border: 1px solid var(--light-gray);
     background: #ffffff08;
     backdrop-filter: blur(20px);
     padding: 10px;
@@ -177,12 +230,111 @@ ellipse {
     border-radius: 10px;
 }
 
+.list-item:hover {
+    border: 1px solid var(--lighter-gray);
+}
+
+.detail-list-item:last-child {
+    padding-right: 20px;
+}
+
 .list-item .detail-name img {
-    width: 90px;
+    width: 55px;
     height: auto;
     border-radius: 50%;
     margin-right: 20px;
 }
+
+
+/*---------------- Single Project --------------*/
+.backpage {
+    padding: 30px 0;
+}
+
+.backpage span {
+    color: var(--lighter-gray);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.backpage span:hover {
+    color: var(--green);
+}
+
+.backpage span svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    transition: 0.3s;
+    margin-top: 3px;
+}
+
+.backpage span svg path {
+    stroke: var(--lighter-gray);
+}
+
+.backpage span:hover svg path {
+    stroke: var(--green);
+}
+
+.project-detail img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.project-content {
+    color: var(--lighter-gray);
+}
+
+.project-detail {
+    border: 1px solid var(--light-gray);
+    background: #ffffff08;
+    backdrop-filter: blur(20px);
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.project-detail {
+    padding: 30px;
+    width: auto;
+}
+
+.project-detail h1 {
+    margin-right: 20px;
+}
+
+.socials-project {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.socials-project a {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials-project a svg path {
+    fill: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*---------------- Responsive --------------*/
