@@ -1,5 +1,5 @@
 <?php
-session_start();
+ob_start();
 add_filter( 'show_admin_bar' , '__return_false' );
 add_action( 'after_setup_theme', 'thistheme_theme_setup' );
 
@@ -17,6 +17,5 @@ function thistheme_name_scripts() {
 }
 
 require get_template_directory() . '/inc/post-type.php';
-
 
 ?>

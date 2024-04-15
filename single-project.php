@@ -135,6 +135,18 @@ get_header();
 				<?php the_content(); ?>
 			</div>
 		</div>
+		<div class="w100 d-inline-block tasks-list">
+			<?php 
+				$query = new WP_Query(array(
+					'post_type'     => 'task',
+				));
+				if ( $query->have_posts() ) {
+					while ( $query->have_posts() ) { $query->the_post();
+						get_template_part('template-part/task-content-list');
+					}
+				}
+			?>
+		</div>
 	</div>
 </div>
 	

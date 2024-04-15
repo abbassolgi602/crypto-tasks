@@ -7,3 +7,14 @@ if (followBtn) {
         followBtn.value = 'Followed';
     });
 }
+
+const collapse = document.querySelectorAll('.collapse');
+
+collapse.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    })
+})
+
+
+

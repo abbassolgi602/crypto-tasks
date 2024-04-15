@@ -325,7 +325,18 @@ ellipse {
     fill: #fff;
 }
 
+.collapse {
+    cursor: pointer;
+}
 
+.collapse .content-task {
+    height: 0;
+    overflow: hidden;
+}
+
+.collapse.active .content-task {
+    height: auto;
+}
 
 
 
