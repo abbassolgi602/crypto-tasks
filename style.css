@@ -251,17 +251,17 @@ ellipse {
     padding: 30px 0;
 }
 
-.backpage span {
+.backpage a {
     color: var(--lighter-gray);
     cursor: pointer;
     transition: 0.3s;
 }
 
-.backpage span:hover {
+.backpage a:hover {
     color: var(--green);
 }
 
-.backpage span svg {
+.backpage a svg {
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -269,11 +269,11 @@ ellipse {
     margin-top: 3px;
 }
 
-.backpage span svg path {
+.backpage a svg path {
     stroke: var(--lighter-gray);
 }
 
-.backpage span:hover svg path {
+.backpage a:hover svg path {
     stroke: var(--green);
 }
 

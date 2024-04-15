@@ -47,15 +47,16 @@ if($follow_state == true) {
 
 acf_form_head();
 get_header();
+
 ?>
 
 <div class="wrapper">
 	<div class="column flex-between flex">
 		<div class="w100 flex-start flex backpage">
-			<span class="flex">
+			<a class="flex" href="<?php echo get_home_url();?>">
 				<svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
 				Back projects
-			</span>
+			</a>
 		</div>
 		<div class="w100 d-inline-block project-detail">
 			<div class="w100 flex-between flex">

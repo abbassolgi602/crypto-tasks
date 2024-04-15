@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 
 <html <?php language_attributes(); ?>>
@@ -19,11 +20,9 @@
 
 </head>
 
-
 <body>
 
 <div class="top-shadow"></div>
-
 <header>
 	<div class="container-fluid px-md-5 px-2">
     	<div class="col-12 px-md-5 px-0">
