@@ -137,12 +137,21 @@ get_header();
 		</div>
 		<div class="w100 d-inline-block tasks-list">
 			<?php 
-				$query = new WP_Query(array(
-					'post_type'     => 'task',
-				));
-				if ( $query->have_posts() ) {
-					while ( $query->have_posts() ) { $query->the_post();
-						get_template_part('template-part/task-content-list');
+				$ids = get_field('related_tasks', false, false);
+				if($ids) {
+					$query = new WP_Query(array(
+						'post_type'     => 'task',
+						'post__in'			=> $ids,
+						'orderby'        	=> 'post__in',
+						'posts_per_page'    => -1,
+						'orderby'=> 'post_date',
+						'order' => 'DESC'
+						
+					));
+					if ( $query->have_posts() ) {
+						while ( $query->have_posts() ) { $query->the_post();
+							get_template_part('template-part/task-content-list');
+						}
 					}
 				}
 			?>

@@ -70,6 +70,7 @@ a:link {
     --light-gray: #3a3a3a;
     --lighter-gray: #656565;
     --green: #6efcd5;
+    --red: #a31a1a;
 }
 
 .green-hover:hover {
@@ -164,6 +165,10 @@ ellipse {
 .wrapper {
     width: 1200px;
     margin: 0 auto;
+}
+
+.position-relative {
+    position: relative;
 }
 
 .d-inline-block {
@@ -325,10 +330,6 @@ ellipse {
     fill: #fff;
 }
 
-.collapse {
-    cursor: pointer;
-}
-
 .collapse .content-task {
     height: 0;
     overflow: hidden;
@@ -337,6 +338,284 @@ ellipse {
 .collapse.active .content-task {
     height: auto;
 }
+
+.head-task {
+    cursor: pointer;
+    color: #fff;
+    padding: 0px 10px;
+    width: -webkit-fill-available;
+}
+
+.head-task h2 {
+    color: #fff;
+}
+
+.head-task svg path {
+    fill: #fff;
+}
+
+.head-task svg {
+    transform: rotate(180deg);
+}
+
+.collapse.active .head-task svg {
+    transform: rotate(0deg);
+}
+
+/*---------------- Header --------------*/
+.main-menu {
+    margin: 20px 0;
+    background: #ffffff08;
+    backdrop-filter: blur(20px);
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+}
+
+header {
+    margin-bottom: 100px;
+}
+
+.main-menu li {
+    margin: 0 20px;
+}
+
+.main-menu li a {
+    color: #fff;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.main-menu li a:hover {
+    opacity: 1;
+}
+
+.login-btn {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.page .user-registration {
+    margin: 20px 0;
+    background: #ffffff08;
+    backdrop-filter: blur(20px);
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+    width: 100%;
+}
+
+#user-registration p {
+    color: var(--lighter-gray) !important;
+}
+
+header .user-registration {
+    width: 600px !important;
+}
+
+.login-done img {
+    width: 50px;
+    height: auto;
+    float: right;
+    margin-left: 15px;
+    border-radius: 50%;
+}
+
+.ur-frontend-form {
+    margin-bottom: 30px;
+    border: none;
+}
+
+header .user-registration {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.user-registration {
+    margin: 20px auto !important;
+    width: 600px;
+    background: #ffffff08 !important;
+    backdrop-filter: blur(20px);
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
+}
+
+header .user-registration.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.dark-layer {
+    background: #0000006b;
+    opacity: 0;
+    visibility: hidden;
+    backdrop-filter: blur(5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 88;
+    cursor: pointer;
+
+}
+
+.dark-layer.active {
+    opacity: 1;
+    backdrop-filter: blur(5px);
+    visibility: visible;
+}
+
+.user-registration input {
+    border-radius: 10px !important;
+    border: 1px solid var(--lighter-gray);
+    background: #ffffff24;
+    padding: 15px 15px !important;
+    color: #fff;
+}
+
+.user-registration button {
+    margin: 40px 0 0 !important;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.user-registration-message {
+    display: flex;
+    width: auto;
+    align-items: center;
+}
+
+.ur-message {
+    display: flex;
+    align-items: center;
+}
+
+.user-text {
+    font-size: 14px;
+    color: var(--green);
+}
+
+header .login-done a {
+    background: #000000b8;
+    width: 200px;
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    transform: translateY(100%);
+    padding: 10px 10px 15px;
+    backdrop-filter: blur(11px);
+    border-radius: 10px;
+    color: var(--red);
+    opacity: 0;
+    transition: 0.4s;
+    visibility: hidden;
+}
+
+header .login-done:hover a {
+    opacity: 1;
+    visibility: visible;
+}
+
+header #user-registration {
+    background: none !important;
+    margin: 0 auto !important;
+    box-shadow: none !important;
+}
+
+header .ur-frontend-form {
+    border: none !important;
+}
+
+#user-registration label {
+    color: #fff;
+    font-weight: bold;
+}
+
+.login>.user-registration-error {
+    display: none;
+}
+
+.user-registration-error a {
+    color: #fff;
+}
+
+#user-registration p a {
+    color: #fff;
+}
+
+.user-registration-Button {
+    border: 1px solid !important;
+    width: 110px;
+}
+
+.user-registration .button {
+    width: 100%;
+}
+
+header .go-to-loggin {
+    text-align: center;
+    margin: 30px 0 0;
+    color: var(--dark-layer2);
+}
+
+header .go-to-loggin span {
+    color: var(--green);
+    cursor: pointer;
+}
+
+header .go-to-Register {
+    text-align: center;
+    margin: 30px 0 0;
+    color: var(--dark-layer2);
+}
+
+header .go-to-Register span {
+    color: var(--green);
+    cursor: pointer;
+}
+
+.title-pages {
+    position: relative;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.title-pages:after {
+    width: 800px;
+    height: 400px;
+    background: var(--dark-layer);
+    border-radius: 60%;
+    filter: blur(120px);
+    opacity: 0.5;
+    position: absolute;
+    content: '';
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: -50%;
+    z-index: -1;
+}
+
+.user-registration-MyAccount-navigation-link a {
+    color: var(--dark-layer2);
+}
+
+.user-registration-MyAccount-navigation-link.is-active a {
+    border-radius: 10px 10px 0 0 !important;
+}
+
+
+
+
 
 
 

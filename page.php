@@ -2,15 +2,15 @@
 
 <main>
 
-<div class="container-fluid px-md-5 px-2">
-	<div class="col-12 px-md-5 px-0">
-		<div class="box-site p-3">
+<div class="wrapper">
+	<div class="column flex-between flex">
+		<div class="w100 flex-start flex column">
 
-			<div class="title-pages">
+			<div class="w100 title-pages">
 				<h1><?php echo get_the_title(); ?></h1>
 			</div>
 
-			<div class="single-content">
+			<div class="w100 single-content">
 				<?php the_content(); ?>
 			</div>
 
