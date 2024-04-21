@@ -613,7 +613,9 @@ header .go-to-Register span {
     border-radius: 10px 10px 0 0 !important;
 }
 
-
+.logo img {
+    width: 60px;
+}
 
 
 

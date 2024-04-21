@@ -31,8 +31,8 @@ global $current_user;
 	<div class="wrapper">
 		<div class="column flex-between flex">
 			<div class="w100 flex-start flex header-items">
-				<a class="samewidth" href="<?php echo get_home_url(); ?>">
-					LOGO
+				<a class="logo samewidth" href="<?php echo get_home_url(); ?>">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/Logo.png" alt="Logo">
 				</a>
 				<ul class="samewidth main-menu flex-center flex">
 					<li><a href="#">All Projects</a></li>
