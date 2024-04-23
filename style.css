@@ -314,6 +314,14 @@ ellipse {
     margin-left: auto;
     display: flex;
     gap: 10px;
+    align-items: center;
+}
+
+.followers {
+    font-size: 14px;
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+    color: var(--lighter-gray);
 }
 
 .socials-project a {
